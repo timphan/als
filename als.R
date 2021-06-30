@@ -6,6 +6,8 @@ library(dplyr)
 library(readr)
 
 #import the csv's directly by using the read_csv function from the readr package
+#if you're having issues downloading the files due to internet speed, make sure to manually set the timeout option (default is 60 seconds)
+options(timeout=500)
 info  <- read_csv(url("https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons.csv"))
 emails<- read_csv(url("https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email.csv"))
 status<- read_csv(url("https://als-hiring.s3.amazonaws.com/fake_data/2020-07-01_17%3A11%3A00/cons_email_chapter_subscription.csv"))
