@@ -1,1 +1,4 @@
-# als
+
+The purpose of this exercise was to clean, manipulate, and condense 3 large datasets into 2 files to be used for further analysis. I chose to use R’s packages as the primary tool to import and wrangle these datasets as it is relatively simple for me to process large datasets with the dplyr package.
+
+The most obvious problem in joining these datasets was identifying the correct unique identifiers between these datasets. The constituent information dataset’s “cons_id” had duplicate values, and I chose to filter out only those addresses weren’t primary email addresses. There was also multiple fields across the datasets that shared the “create_dt” value, and I chose to prioritize the one in the info dataset for the final file. The implications of this decision is that your product is going to miss out on secondary emails that didn’t code as the primary account holder, and the user created date did not match the user created date in the emails dataset. 
